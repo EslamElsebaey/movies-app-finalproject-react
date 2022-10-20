@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/movies-app-finalproject-react/static/css/main.64bcb486.css",
+    "main.js": "/movies-app-finalproject-react/static/js/main.fc31e827.js",
+    "static/media/fa-solid-900.ttf": "/movies-app-finalproject-react/static/media/fa-solid-900.b48ad290d0335879a92b.ttf",
+    "static/media/fa-brands-400.ttf": "/movies-app-finalproject-react/static/media/fa-brands-400.f9ee61fab3c11e2f3ed3.ttf",
+    "static/media/fa-solid-900.woff2": "/movies-app-finalproject-react/static/media/fa-solid-900.66104b766c3d0462b3c5.woff2",
+    "static/media/fa-brands-400.woff2": "/movies-app-finalproject-react/static/media/fa-brands-400.e1a247a5ef41e1975742.woff2",
+    "static/media/fa-regular-400.ttf": "/movies-app-finalproject-react/static/media/fa-regular-400.abf801b7acb6705a15ad.ttf",
+    "static/media/fa-regular-400.woff2": "/movies-app-finalproject-react/static/media/fa-regular-400.639d2000c1ece92eaec8.woff2",
+    "static/media/fa-v4compatibility.ttf": "/movies-app-finalproject-react/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
+    "static/media/fa-v4compatibility.woff2": "/movies-app-finalproject-react/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
+    "index.html": "/movies-app-finalproject-react/index.html",
+    "main.64bcb486.css.map": "/movies-app-finalproject-react/static/css/main.64bcb486.css.map",
+    "main.fc31e827.js.map": "/movies-app-finalproject-react/static/js/main.fc31e827.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64bcb486.css",
+    "static/js/main.fc31e827.js"
+  ]
+}
