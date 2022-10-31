@@ -28,7 +28,7 @@ export default function Register() {
     }
 
  async function sendUser (event){
-  event.preventDefault()
+  event.preventDefault();
   if(validateUserData() === true){
     let response = await axios.post("https://route-egypt-api.herokuapp.com/signup" , user);
     if(response.data.message.includes("success")){
@@ -42,7 +42,6 @@ export default function Register() {
       setSuccess(response.data.message);
       $(".registermessage").css("marginTop", "-10px")
     }
-  
   }
 
  }
@@ -67,7 +66,7 @@ export default function Register() {
   })
     let validate =   schema.validate(user , {abortEarly  : false}); 
     if(validate.error !== undefined){
-      setErrors(validate.error.details)
+      setErrors(validate.error.details);
       return false
     }else{
       return true
@@ -87,16 +86,16 @@ export default function Register() {
         {errors.length > 0 ?  <ul className='alert alert-danger errorslist'>
           {errors.length > 0 ? errors.map((error , index) => {
               if(error.message.includes("alpha-numeric")){
-                error.message = " Name must contains characters only"
+                error.message = "Name must contains characters only"
               }
               if(error.message.includes("pattern")){
-                error.message = " Password must start with small character"
+                error.message = "Password must start with small character"
               }
               if(error.message.includes("email")){
-                error.message = " Email must be a valid email example johndoe123@gmail.com/net"
+                error.message = "Email must be a valid email example johndoe123@gmail.com/net"
               }
               if(error.message.includes("age")){
-                error.message = " Age must be greater then 18 and less than 80"
+                error.message = "Age must be greater then 18 and less than 80"
               }
             return <li key={index} className=''>{error.message}</li>
           }) : ""}
