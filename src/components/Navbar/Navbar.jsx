@@ -33,11 +33,22 @@ $(".nav-link").click(function(){
 })
 
 
+
+// scroller progress
+
+window.addEventListener("scroll", () => {
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollTop = document.documentElement.scrollTop;
+  $(".scroller").css("width" , `${(scrollTop / height) * 100}%`)
+});
+
  
  
   return (
     <>
+   
     <nav className="navbar   navbar-expand-lg  ">
+    <div className="scroller"></div>
       <div className="container">
         <div className="logoinfo d-flex align-items-center justify-content-center">
             <Link className="navbar-brand text-capitalize" to="home">

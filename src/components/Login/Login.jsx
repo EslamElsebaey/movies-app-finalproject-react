@@ -12,10 +12,12 @@ export default function Login({checkLogin}) {
     "email":"",
     "password":"",
   })
+  
   let navigation = useNavigate()
 
   const [ loginAccept , setLoginAccept ] = useState(""); 
   const [errors , setErrors] = useState([]);
+  const [succes , setSuccess] = useState("");
 
   function matchLoginUser(event){
     let myUser = {...loginUser} ; 
@@ -49,10 +51,12 @@ export default function Login({checkLogin}) {
         setLoginAccept(data.message);
         $(".errors-list").html("");
         if(data.message === "success"){
+          setSuccess(data.message)
           localStorage.setItem("newUser" , data.token );
-          navigation("/home");
+          setTimeout(() => {
+            navigation("/home");
+          }, 2500);
         }
-       
       }
       
     }
@@ -76,6 +80,7 @@ export default function Login({checkLogin}) {
             return <li key={index} className=''>{error.message}</li>
           }) : ""}
           </ul> : "" }  
+          {succes.includes("success") ? <h5 className=' d-flex align-items-center  registermessage'> Login Success , Going to Home page  <div><div className="lds-ring"><div></div><div></div><div></div><div></div></div></div> </h5>  :""}
           <h1 className="mb-3">Login</h1>
           <form onSubmit={  (eventinfo)=>{ addLoginUser(eventinfo) }}>
             <label htmlFor="">Eamil :</label>
