@@ -48,7 +48,7 @@ window.addEventListener("scroll", () => {
     <>
    
     <nav className="navbar   navbar-expand-lg  ">
-    <div className="scroller"></div>
+    {isLogin == null ? "" : <div className="scroller"></div>}
       <div className="container">
         <div className="logoinfo d-flex align-items-center justify-content-center">
             <Link className="navbar-brand text-capitalize" to="home">

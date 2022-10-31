@@ -53,7 +53,7 @@ function App() {
  }
 
 
- $(window).scroll( function(){
+ $(window).scroll( ()=>{
   if(window.scrollY > 450){
     $(".toTop").show(1000)
   }else{
@@ -62,9 +62,7 @@ function App() {
  })
 
  $(".toTop").click(function(){
-  $("html , body").animate({
-    scrollTop : "0px"
-  } , 1500)
+  document.documentElement.scrollTop = 0 ;
  })
 
  useEffect(  ()=>{
