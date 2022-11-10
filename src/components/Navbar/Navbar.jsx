@@ -6,7 +6,7 @@ import $ from "jquery";
 
 
 
-export default function Navbar({isLogin  , userName , setuserName , setIsLogin , inputSearchFunc}) {
+export default function Navbar({isLogin  , userName , setuserName , setIsLogin , inputSearchFunc , setSearchedItem }) {
  
 
   let navigation = useNavigate()
@@ -33,6 +33,12 @@ $(".nav-link").click(function(){
 })
 
 
+function emptySearchInput (){
+  $(".search-input").val("");
+  setSearchedItem([]);
+  $(".search-close").addClass("d-none");
+}
+
 
 // scroller progress
 
@@ -47,7 +53,7 @@ window.addEventListener("scroll", () => {
   return (
     <>
    
-    <nav className="navbar   navbar-expand-lg  ">
+    <nav className="navbar navbar-expand-lg  " >
     {isLogin == null ? "" : <div className="scroller"></div>}
       <div className="container">
         <div className="logoinfo d-flex align-items-center justify-content-center">
@@ -78,7 +84,10 @@ window.addEventListener("scroll", () => {
           <ul className="navbar-nav ms-auto  ">
             {isLogin === null ? "" :   <li className="nav-item inputli me-4">
               <Link to="/SearchComp">
+             <div className='position-relative h-100 mb-0'>
               <input type="text" onKeyUp={(event)=>{ inputSearchFunc(event)  }} className='form-control h-100 search-input' placeholder='Search' />
+              <span className='search-close d-none ' onClick={ ()=>{emptySearchInput()}}><i   className="fa-solid fa-circle-xmark"></i></span>
+             </div>   
               </Link>
           </li>}
         

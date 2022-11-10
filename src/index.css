@@ -153,6 +153,7 @@
  .navbar-toggler:focus {
 	 box-shadow: none;
 }
+
  .logout {
 	 cursor: pointer;
 }
@@ -194,13 +195,23 @@
  .nav-link:focus, .navbar-brand:focus, .nav-link:hover, .navbar-brand:hover {
 	 color: #fff;
 }
+.search-close{
+	position: absolute;
+    top: 0;
+    right: 11px;
+    top: 54%;
+    transform: translateY(-50%);
+}
+.search-close .svg-inline--fa{
+	font-size: 20px !important;
+}
  .search-input.form-control {
 	 color: #fff;
 }
  .search-input.form-control::placeholder {
 	 color: #fff;
 }
- .svg-inline--fa {
+.svg-inline--fa {
 	 color: #fff;
 	 font-size: 29px;
 }
@@ -370,7 +381,7 @@
  .register-item {
 	 width: 75%;
 	 background-color: transparent;
-	 border: 1.8px solid #fff;
+	 border: 2px solid #fff;
 	 border-radius: 15px;
 	 padding: 20px;
 	 margin: auto;
@@ -434,8 +445,8 @@
 	 padding: 30px;
 	 border-radius: 15px;
 	 width: 80%;
-	 margin: auto;
-	 border: 1.8px solid #fff;
+	margin: auto;
+	 border: 2px solid #fff;
 }
  .login input {
 	 margin-bottom: 15px;

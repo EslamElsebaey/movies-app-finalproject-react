@@ -42,13 +42,17 @@ function App() {
  }
 
 
+
+
  
  async function searchMoviesTvshows(term){
   if(term !== undefined && term !== ""){
     let {data} = await axios.get("https://api.themoviedb.org/3/search/multi?api_key=56f77d211d0e245479bc8ca9bc057fea&language=en-US&page=1&include_adult=false&query="+term);
     setSearchedItem(data.results);
+    $(".search-close").removeClass("d-none");
   }else if (term === ""){
     setSearchedItem([]);
+    $(".search-close").addClass("d-none");
   }
  }
 
@@ -84,7 +88,7 @@ function App() {
   return (
     <>
    <div className="toTop"><i className="fa-solid arrowTop fa-angle-up"></i></div>
-   <Navbar inputSearchFunc={inputSearchFunc} checkLogin={checkLogin} isLogin={isLogin} setIsLogin={setIsLogin}  userName={userName} setuserName={setuserName}  />
+   <Navbar setSearchedItem={setSearchedItem}   inputSearchFunc={inputSearchFunc} checkLogin={checkLogin} isLogin={isLogin} setIsLogin={setIsLogin}  userName={userName} setuserName={setuserName}  />
    <Routes>
    <Route path="/"  element={<Login/> } />
    <Route path="particles"  element={<Myparticles/> } />
